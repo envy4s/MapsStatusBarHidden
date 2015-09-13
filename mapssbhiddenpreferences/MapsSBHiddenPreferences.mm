@@ -27,7 +27,7 @@
 	[defaults setObject:value forKey:specifier.properties[@"key"]];
 	[defaults writeToFile:MapsPreferencePath atomically:YES];
 	NSDictionary *mapsSettings = [NSDictionary dictionaryWithContentsOfFile:MapsPreferencePath];
-	CFStringRef mikotoPost = (CFStringRef)specifier.properties[@"PostNotification"];
-	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), mikotoPost, NULL, NULL, YES);
+	CFStringRef Post = (CFStringRef)specifier.properties[@"PostNotification"];
+	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), Post, NULL, NULL, YES);
 }
 @end
