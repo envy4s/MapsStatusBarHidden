@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = MapsSBHiddenPreferences;
+	cell = PSLinkCell;
+	detail = MapsSBHiddenPreferencesListController;
+	icon = mapsstatusbarhiddenpreferences.png;
+	isController = 1;
+	label = MapsSBHidden;
+    };
+}

@@ -1,0 +1,10 @@
+Package: com.cabralcole.mapssbhidden
+Name: MapsStatusBarHidden
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Hides Maps status bar iOS 8.4 and supports iOS 9.
+Maintainer: cabralcole
+Author: cabralcole
+Section: Tweaks
+Version: 0.0.1-5
+Installed-Size: 200
