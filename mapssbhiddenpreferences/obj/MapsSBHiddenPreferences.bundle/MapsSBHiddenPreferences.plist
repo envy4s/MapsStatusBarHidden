@@ -27,12 +27,20 @@
 			<string>com.cabralcole.mapssbhidden-PreferencesChanged</string>
 		</dict>
 
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>killMaps</string>
+			<key>label</key>
+			<string>Apply</string>
+		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>© 2015 Cole Cabral (ca13ra1)</string>
+			<string>© 2015 Cole Cabral (@ca13ra1)</string>
 		</dict>
 	</array>
 	<key>title</key>

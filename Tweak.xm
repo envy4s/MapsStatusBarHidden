@@ -22,6 +22,10 @@ static void mapsInitPrefs() {
 	MapsSBHiddenOption = mapsOptionKey ? [mapsOptionKey boolValue] :1;
 }
 
+static void killMaps() {
+	system("/usr/bin/killall -9 Maps");
+}
+
 %ctor {
 	mapsInitPrefs();
 	MapsObserver (mapsInitPrefs, "com.cabralcole.mapssbhidden-PreferencesChanged");

@@ -30,4 +30,21 @@
 	CFStringRef Post = (CFStringRef)specifier.properties[@"PostNotification"];
 	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), Post, NULL, NULL, YES);
 }
+
+-(void) killMaps{
+	UIAlertView *suicidalMaps = [[UIAlertView alloc] initWithTitle:@"Note"
+		message:@"The Maps app will now kill itself to apply changes."
+		delegate:self
+		cancelButtonTitle:@"OK"
+		otherButtonTitles:nil];
+	[suicidalMaps show];
+	[suicidalMaps release];
+}
+
+-(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+	if (buttonIndex == 0) {
+		system("/usr/bin/killall -9 Maps");
+	}
+}
+
 @end
