@@ -47,4 +47,41 @@
 	}
 }
 
+@interface PSTableCell : UITableViewCell
+@end
+ 
+@protocol PreferencesTableCustomView
+- (id)initWithSpecifier:(PSSpecifier *)specifier;
+- (CGFloat)preferredHeightForWidth:(CGFloat)width;
+@end
+ 
+@interface CustomCell : PSTableCell <PreferencesTableCustomView> {
+	UILabel *_label;
+	UIImage *backImage = [[UIImage alloc] initWithContentsOfFile:@"/Library/PreferenceBundles/MapsSBHiddenPreferences.bundle/mapsstatusbarhiddenpreferences@2x.png"];
+}
+@end
+ 
+@implementation CustomCell
+- (id)initWithSpecifier:(PSSpecifier *)specifier {
+	self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" specifier:specifier];
+	if (self) {
+		_label = [[UILabel alloc] initWithFrame:[self frame]];
+		[_label setLineBreakMode:UILineBreakModeWordWrap];
+		[_label setNumberOfLines:0];
+		[_label setText:@"MapsSBHidden"];
+		[_label setBackgroundColor:[UIColor clearColor]];
+		[_label setShadowColor:[UIColor whiteColor]];
+		[_label setShadowOffset:CGSizeMake(0,1)];
+		[_label setTextAlignment:UITextAlignmentCenter];
+ 
+		[self addSubview:_label];
+		[_label release];
+	}
+	return self;
+}
+ 
+- (CGFloat)preferredHeightForWidth:(CGFloat)width {
+	// Return a custom cell height.
+	return 60.f;
+}
 @end
