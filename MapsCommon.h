@@ -1,6 +1,7 @@
 #import <CoreFoundation/CoreFoundation.h>
 #import <Foundation/Foundation.h>
 
+
 #define MapsPreferencePath @"/User/Library/Preferences/com.cabralcole.mapssbhidden.plist"
 
 #define MapsStringPref(var, key, default) do { \

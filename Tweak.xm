@@ -9,6 +9,8 @@
 
 #import "MapsCommon.h"
 
+
+
 #define MapsPreferencePath @"/User/Library/Preferences/com.cabralcole.mapssbhidden.plist"
 
 #define MapsObserver(funcToCall, listener) CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)funcToCall, CFSTR(listener), NULL, CFNotificationSuspensionBehaviorCoalesce);
