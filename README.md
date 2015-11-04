@@ -11,4 +11,4 @@ Enable or disable the status bar in Maps iOS 8.4 app. Application will need to b
 ![animation-settings.gif](/README/animation-settings.gif?raw=true "animation-settings")
 
 
-BSD-licensed. See LICENSE for more information.
+BSD-licensed. See `LICENSE` for more information.
